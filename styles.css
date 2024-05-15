@@ -1,0 +1,44 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.trampoline {
+    position: relative;
+    width: 20%;
+}
+
+.trampoline img {
+    width: 100%;
+    height: auto;
+}
+
+.llama {
+    position: absolute;
+    bottom: 38%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: jump 2s infinite alternate ease-in-out;
+    width: 20%;
+    z-index: 1;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
